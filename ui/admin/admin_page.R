@@ -1,6 +1,6 @@
 library(shinydashboard)
 
-Build <- source('./ui/admin/build_page.R', local = TRUE)
+Code_Runner_Tab <- source('./ui/admin/code_runner_page.R', local = TRUE)
 
 Settings <- source('./ui/settings.R', local = TRUE)
 
@@ -28,18 +28,12 @@ fluidPage(
         )
         
         
-        # tags$div(
-        #   style = "margin-left:25px;margin-top: 8px; display:inline-block;",
-        #   HTML(
-        #     "<a href='#' class='sidebar-toggle' style='color:#fff;', data-toggle='offcanvas' role='button'><em class='fa fa-bars'></em><span class='sr-only'>Toggle navigation</span></a>"
-        #   )
-        # )
       ),
       id = "Front",
       
       
-      # Build Page ----
-      Build$value,
+      # Code Runner ----
+      Code_Runner_Tab$value,
       
       
       # Settings Page ----
