@@ -8,9 +8,7 @@ find_hashed_output <- eventReactive(input$start_hash, {
 
 })
 
- <- renderText({
-  find_hashed_output()
-})
+
 
 
 observeEvent(input$start_hash, {
