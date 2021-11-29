@@ -24,7 +24,15 @@ loginUI <- function(id, title = "Please log in", user_title = "User Name", pass_
   ns <- shiny::NS(id)
   
   shiny::div(id = ns("panel"), style = "width: 500px; max-width: 100%; margin: 0 auto; padding: 20px;",
+             br(),br(),br(),br(),  
              shiny::wellPanel(
+               
+               shiny::includeCSS("static/webstyle.css"),
+               shiny::includeHTML("static/webstyle.html"),
+               
+               
+               shiny::tags$br(),
+               
                shiny::tags$h2(title, class = "text-center", style = "padding-top: 0;"),
                
                shiny::textInput(ns("user_name"), shiny::tagList(shiny::icon("user"), user_title)),
@@ -43,6 +51,9 @@ loginUI <- function(id, title = "Please log in", user_title = "User Name", pass_
                )
              )
   )
+  
+  
+
 }
 
 
